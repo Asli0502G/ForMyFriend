@@ -1,0 +1,7 @@
+{
+  "name": "kelime-karti",
+  "private": true,
+  "dependencies": {
+    "@vercel/functions": "^3.10.5"
+  }
+}

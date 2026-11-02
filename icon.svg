@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#fff0f3"/>
+  <path d="M120 170 C96 120 104 70 150 44 C146 84 166 112 202 126 Z" fill="#9f1239"/>
+  <path d="M392 170 C416 120 408 70 362 44 C366 84 346 112 310 126 Z" fill="#9f1239"/>
+  <path d="M256 456 C118 346 64 268 64 200 C64 148 104 112 154 112 C200 112 236 138 256 176 C276 138 312 112 358 112 C408 112 448 148 448 200 C448 268 394 346 256 456 Z" fill="#ff4d6d"/>
+  <text x="256" y="272" font-family="system-ui, -apple-system, Roboto, sans-serif" font-size="96" font-weight="800" text-anchor="middle" textLength="250" lengthAdjust="spacingAndGlyphs" fill="#ffffff">Nisa</text>
+</svg>

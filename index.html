@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Kelime Kartı</title>
+  <meta name="theme-color" content="#f6f7fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e0f1a" media="(prefers-color-scheme: dark)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+  <main id="app">
+    <section id="start-screen" class="screen screen-center">
+      <img class="logo" src="icon.svg" alt="" width="96" height="96">
+      <h1>Kelime Kartı</h1>
+      <p class="lead">Kartı çevir, anlamı gör, bildin mi işaretle.</p>
+      <button id="start-btn" class="btn btn-primary">Başla</button>
+      <button id="review-btn" class="btn btn-secondary" disabled>Bilemediklerim</button>
+      <button id="theme-btn" class="link-btn"></button>
+    </section>
+
+    <section id="study-screen" class="screen" hidden>
+      <header class="top">
+        <div class="top-row">
+          <button id="home-btn" class="icon-btn" aria-label="Ana ekrana dön">&#x2715;</button>
+          <p id="progress" class="progress"></p>
+          <span id="mode-tag" class="mode-tag" hidden>Bilemediklerim</span>
+        </div>
+        <div class="bar"><div id="bar-fill" class="bar-fill"></div></div>
+      </header>
+
+      <div class="stage">
+        <div id="card" class="card" role="button" tabindex="0" aria-pressed="false">
+          <div class="card-inner">
+            <div class="card-face card-front"><span id="word" class="face-text"></span></div>
+            <div class="card-face card-back">
+              <div class="back-content">
+                <span id="meaning" class="face-text"></span>
+                <p id="example" class="example" lang="en"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p id="hint" class="hint">Anlamı görmek için karta dokun</p>
+      </div>
+
+      <div class="actions">
+        <button id="missed-btn" class="btn btn-missed" disabled>Bilemedim</button>
+        <button id="known-btn" class="btn btn-known" disabled>Bildim</button>
+      </div>
+    </section>
+
+    <section id="result-screen" class="screen screen-center" hidden>
+      <h2 id="result-text"></h2>
+      <p id="result-sub" class="lead" hidden></p>
+      <button id="restart-btn" class="btn btn-primary">Tekrar başla</button>
+      <button id="home-result-btn" class="btn btn-secondary">Ana ekran</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
